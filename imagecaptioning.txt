@@ -1,0 +1,22 @@
+def chatbot_response(user_input):
+    user_input = user_input.lower()  # Normalize the input
+    
+    # Define responses for various inputs
+    if "hello" in user_input or "hi" in user_input:
+        return "Hello! How can I help you today?"
+    elif "how are you" in user_input:
+        return "I'm just a bot, but I'm here to help you! How can I assist you?"
+    elif "what is your name" in user_input:
+        return "I'm a chatbot created to assist you with your queries."
+    elif "bye" in user_input or "goodbye" in user_input:
+        return "Goodbye! Have a great day!"
+    else:
+        return "I'm sorry, I don't understand that. Can you please rephrase?"
+
+# Test the chatbot
+while True:
+    user_input = input("You: ")
+    if user_input.lower() in ["bye", "goodbye"]:
+        print("Chatbot: " + chatbot_response(user_input))
+        break
+    print("Chatbot: " + chatbot_response(user_input))
